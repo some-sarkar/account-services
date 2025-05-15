@@ -10,6 +10,7 @@ import com.banking.accountservices.models.entities.coreAccountManagement.Account
 @Repository
 public interface AccountRepository extends JpaRepository<Account, Long> {
 
+   
    Account findByAccountNumber(String accountNumber);
    
 }

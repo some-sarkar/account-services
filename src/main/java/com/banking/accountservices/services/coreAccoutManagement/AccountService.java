@@ -34,7 +34,7 @@ public class AccountService {
     public Optional<Account> updateAccountById(Long accountId, Account account) {
         Account existingAccount = accountRepository.findById(accountId)
             .orElseThrow(() -> new RuntimeException("Account not found with ID: " + accountId));
-
+        	
             existingAccount.setAccountNumber(account.getAccountNumber());
             existingAccount.setAccountType(account.getAccountType());
             existingAccount.setAccountStatus(account.getAccountStatus());
