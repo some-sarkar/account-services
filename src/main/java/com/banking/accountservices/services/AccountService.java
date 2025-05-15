@@ -1,10 +1,10 @@
-package com.banking.accountservices.services.coreAccoutManagement;
+package com.banking.accountservices.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.banking.accountservices.models.entities.coreAccountManagement.Account;
-import com.banking.accountservices.repositories.coreAccountManagement.AccountRepository;
+import com.banking.accountservices.models.entities.Account;
+import com.banking.accountservices.repositories.AccountRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -41,6 +41,7 @@ public class AccountService {
             existingAccount.setUserId(account.getUserId());
             existingAccount.setBranchCode(account.getBranchCode());
             existingAccount.setBalance(account.getBalance());
+            existingAccount.setNominee(account.getNominee());
         
         return Optional.of(accountRepository.save(existingAccount));
 

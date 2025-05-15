@@ -1,9 +1,9 @@
-package com.banking.accountservices.repositories.coreAccountManagement;
+package com.banking.accountservices.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.banking.accountservices.models.entities.coreAccountManagement.Account;
+import com.banking.accountservices.models.entities.Account;
 
 
 

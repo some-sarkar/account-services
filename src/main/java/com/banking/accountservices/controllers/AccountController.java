@@ -1,4 +1,4 @@
-package com.banking.accountservices.controllers.coreAccountManagement;
+package com.banking.accountservices.controllers;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.banking.accountservices.models.entities.coreAccountManagement.Account;
-import com.banking.accountservices.services.coreAccoutManagement.AccountService;
+import com.banking.accountservices.models.entities.Account;
+import com.banking.accountservices.services.AccountService;
 
 
 @RestController

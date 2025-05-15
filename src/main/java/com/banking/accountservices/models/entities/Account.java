@@ -1,11 +1,7 @@
-package com.banking.accountservices.models.entities.coreAccountManagement;
+package com.banking.accountservices.models.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 
 import lombok.Getter;
@@ -31,7 +27,11 @@ public class Account {
     private String accountStatus;
     private Long userId;
     private String branchCode;
+    private String ifscCode;
     private Long balance;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "nominee_id", referencedColumnName = "nomineeId")
+    private Nominee nominee;
     
     
 }
