@@ -41,7 +41,7 @@ public class AccountService {
             existingAccount.setUserId(account.getUserId());
             existingAccount.setBranchCode(account.getBranchCode());
             existingAccount.setBalance(account.getBalance());
-            existingAccount.setNominee(account.getNominee());
+            existingAccount.setNomineeId(account.getNomineeId());
         
         return Optional.of(accountRepository.save(existingAccount));
 

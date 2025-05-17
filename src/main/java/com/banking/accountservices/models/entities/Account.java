@@ -29,9 +29,7 @@ public class Account {
     private String branchCode;
     private String ifscCode;
     private Long balance;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "nominee_id", referencedColumnName = "nomineeId")
-    private Nominee nominee;
+    private Long nomineeId;
     
     
 }
